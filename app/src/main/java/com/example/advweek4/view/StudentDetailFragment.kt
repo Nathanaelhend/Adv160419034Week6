@@ -1,15 +1,20 @@
 package com.example.advweek4.view
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.android.volley.Request
+import com.android.volley.toolbox.StringRequest
 import com.example.advweek4.R
 import com.example.advweek4.model.Student
 import com.example.advweek4.viewmodel.DetailViewModel
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.fragment_student_detail.*
 import kotlinx.android.synthetic.main.fragment_student_detail.view.*
 import kotlinx.android.synthetic.main.fragment_student_list.*
