@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.advweek4.R
 import com.example.advweek4.model.Student
 import com.example.advweek4.util.loadImage
+import kotlinx.android.synthetic.main.fragment_student_detail.view.*
+import kotlinx.android.synthetic.main.fragment_student_list.view.*
 import kotlinx.android.synthetic.main.student_list_item.view.*
 
 class StudentListAdapter (val studentList: ArrayList<Student>) : RecyclerView
