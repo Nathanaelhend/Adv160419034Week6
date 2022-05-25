@@ -8,6 +8,14 @@
             name="student"
             type="com.example.advweek4.model.Student" />
 
+        <variable
+            name="notification"
+            type="com.example.advweek4.view.NotificationListener" />
+
+        <variable
+            name="update"
+            type="com.example.advweek4.view.UpdateListener" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
