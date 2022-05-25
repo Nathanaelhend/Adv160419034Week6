@@ -6,8 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.example.advweek4.R
+import com.example.advweek4.databinding.FragmentStudentDetailBinding
 import com.example.advweek4.model.Student
 import com.example.advweek4.util.loadImage
 import com.example.advweek4.viewmodel.DetailViewModel
@@ -25,13 +27,18 @@ import java.util.concurrent.TimeUnit
 
 class StudentDetailFragment : Fragment() {
     private lateinit var viewModel: DetailViewModel
+    private lateinit var dataBinding: FragmentStudentDetailBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_student_detail, container, false)
+        dataBinding = DataBindingUtil.inflate(inflater, R.layout
+            .fragment_student_detail, container, false)
+
+        return dataBinding.root
+        //return inflater.inflate(R.layout.fragment_student_detail, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -40,7 +47,6 @@ class StudentDetailFragment : Fragment() {
             val studentId = StudentDetailFragmentArgs.fromBundle(requireArguments()).studentDetail
             viewModel.fetch(studentId)
         }
-
 
         observeViewModel()
     }
